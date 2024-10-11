@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* general CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    background: #000000f1;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2e2e2e;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5c5c5c;
+    border-radius: 10px;
+    border: 3px solid #2e2e2e;
+    transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #6d6969;
+}
+.lato-regular {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.lato-regular {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ----------------------------------------------------------------- */
+
+.logo {
+    height: 80px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 40px;
+    /* padding-top: 30px; */
+    /* overflow: hidden; */
+}
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 35px;
+    padding-right: 30px;
+}
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    /* font-weight: bold;     */
+    position: relative;
+}
+.nav-links li a::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    background: #fff;
+    bottom: -4px;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s all ease;
+}
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* tooltip */
+
+.buy {
+    position: relative;
+}
+#tooltip {
+    position: absolute;
+    bottom: -260%;
+    left: -440%;
+    text-wrap: nowrap;
+    color: #000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    height: auto;
+    padding: 8px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* position: relative; */
+}
+#tooltip::after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    /* background: white; */
+    position: absolute;
+    top: -15px;
+    right: 0;
+    border-color: #000 #0000 #0000 #0000;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 150%; /* Position below the link */
+    left: -300%; /* Align tooltip with the right edge of the link */
+    margin-left: 0px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -10px; /* Adjust based on the arrow size */
+    right: 10px; /* Position arrow towards the right side */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent; /* Creates the arrow pointing up */
+}
+
+.buy:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* choice cards */
+
+.choice-cards {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(223, 221, 221, 0.5);
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.icon {
+    align-self: center;
+    height: 55px;
+    width: 55px;
+}
+/* footer*/
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0b141d;
+    color: white;
+}
+/* --------------------------------- */
+
+
+
+/* music list section */
+
+
+.music-list-section{
+    margin-top: -50px;
+    animation: linear appear;
+    animation-timeline: view();
+    animation-range: entry;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.music-list {
+    padding: 10vh;
+    background: #5a96d6;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    overflow-x: scroll;
+    /* justify-content: center; */
+}
+
+.music-card {
+    background-color: #023e8a;
+    border-radius: 10px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.music-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.music-info p {
+    margin: 5px 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+/* --------------------------------------- */

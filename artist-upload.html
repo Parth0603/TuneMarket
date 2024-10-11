@@ -1,0 +1,62 @@
+ <!DOCTYPE html><html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Page</title>
+    <link rel="stylesheet" href="artist-upload.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <section id="navbar">
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="assets/images/logo.png" class="logo" alt="logoImg">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sign-up.html">SignUp</a></li>
+                <li><a href="artist-upload.html">Artist</a></li>
+                <li class="buy"><a href="buyer-page.html">Buy</a>
+                    <span class="tooltiptext">Want to buy a music?</span></li>
+            </ul>
+        </nav>
+    </section>
+
+    <main>
+        <section class="upload-section">
+            <h2>Upload Your Music</h2>
+            <form id="upload-form">
+                <label for="music-title">Music Title:</label>
+                <input type="text" id="music-title" required>
+                
+                <label for="artist-name">Artist Name:</label>
+                <input type="text" id="artist-name" placeholder="Your Name" required>
+                
+                <label for="music-file">Select Music File:</label>
+                <input type="file" id="music-file" accept="audio/*" required>
+
+                <label for="price">Set Price:</label>
+                <input type="number" id="price" min="0" step="0.01" required>
+
+                <button type="submit">Upload Music</button><button id="remove-all">Reset</button>
+            </form>
+        </section>
+
+        <section class="uploaded-music">
+            <h2>Your Uploaded Music</h2>
+            <div class="music-list" id="music-list">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Tune maket. Made by TechTrio.</p>
+    </footer>
+
+
+    <script src="artist-upload.js"></script>
+</body>
+</html>

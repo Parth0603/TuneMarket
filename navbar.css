@@ -1,0 +1,112 @@
+
+.buy {
+    position: relative;
+}
+#tooltip {
+    position: absolute;
+    bottom: -260%;
+    left: -440%;
+    text-wrap: nowrap;
+    color: #000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    height: auto;
+    padding: 8px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* position: relative; */
+}
+#tooltip::after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    /* background: white; */
+    position: absolute;
+    top: -15px;
+    right: 0;
+    border-color: #000 #0000 #0000 #0000;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 150%; /* Position below the link */
+    left: -300%; /* Align tooltip with the right edge of the link */
+    margin-left: 0px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -10px; /* Adjust based on the arrow size */
+    right: 10px; /* Position arrow towards the right side */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent; /* Creates the arrow pointing up */
+}
+
+.buy:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.logo {
+    height: 80px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 40px;
+    padding-top: 30px;
+    /* overflow: hidden; */
+}
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 35px;
+    padding-right: 30px;
+}
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    /* font-weight: bold;     */
+    position: relative;
+}
+.nav-links li a::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    background: #fff;
+    bottom: -4px;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s all ease;
+}
+.nav-links li a:hover::after {
+    width: 100%;
+}

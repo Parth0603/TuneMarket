@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="sign-up.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    
+    <section id="navbar">
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="assets/images/logo.png" class="logo" alt="logoImg">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sign-up.html">SignUp</a></li>
+                <li><a href="artist-upload.html">Artist</a></li>
+                <li class="buy"><a href="buyer-page.html">Buy</a>
+                    <span class="tooltiptext">Want to buy a music?</span></li>
+            </ul>
+        </nav>
+    </section>
+
+
+
+    <main>
+        <section id="sign-up-section">
+            <h2>Create Your Account</h2>
+            <form id="sign-up-form">
+                <label for="wallet-address">Wallet Address:</label>
+                <input type="text" id="wallet-address" required>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account?<a href="buyer-page.html">Login here</a></p>
+            <p>or click <a href="buyer-page.html">here</a> if you have already loggedIn</p>
+        </section>
+    </main>
+    <footer>
+        <p>© Tune maket. Made by TechTrio.</p>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
